@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuniBot Rosario</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-2xl bg-white shadow-2xl rounded-lg overflow-hidden my-8">
+        
+        <header class="bg-blue-600 text-white p-4 flex items-center space-x-3 h-20">
+            <img src="./LogoMunibot.jpg" alt="Logo MuniBot" class="rounded-full h-full w-auto object-contain">
+            <div>
+                <h1 class="text-xl font-bold">MuniBot Rosario</h1>
+                <p class="text-sm text-blue-100">Tu asistente para la vida estudiantil</p>
+            </div>
+        </header>
+
+        <div id="chat-messages" class="h-96 overflow-y-auto p-4 space-y-4">
+            </div>
+
+        <div id="typing-indicator" class="p-4 hidden">
+            <div class="chat-bubble-bot p-3 max-w-xs">
+                <div class="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="quick-options" class="p-4 border-t border-gray-200 flex flex-wrap gap-2">
+            </div>
+
+        <footer class="p-4 border-t border-gray-200 bg-white">
+            <div class="flex items-center space-x-2">
+                <input type="text" id="chat-input" placeholder="Escribe tu consulta o elige una opción..."
+                    class="flex-1 border border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                <button id="send-button"
+                    class="bg-blue-600 text-white rounded-full h-12 w-12 flex items-center justify-center hover:bg-blue-700 transition shadow-lg">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script id="sports-knowledge-base" type="text/plain">
+Eres MuniBot, un asistente especializado en deportes y bienestar físico en Rosario, Santa Fe (Argentina).
+RESTRICCION OBLIGATORIA: 
+QUE LA RESPUESTA NO SUPERE LAS 10 LINEAS DE TEXTO.
+Al final de cada respuesta: → preguntar si el usuario desea más información.
+
+REGLAS PRINCIPALES:
+Solo respondés consultas relacionadas con deportes y bienestar en Rosario.
+Si la pregunta no es sobre deporte y bienestar o no es de Rosario → rechazá amablemente.
+No inventes información.
+Si falta algún dato → aclaralo y sugiere contactar al lugar.
+Si hay mucha información → resumir y ofrecer ampliarla.
+Si los datos no están disponibles → decirlo explícitamente.
+No intentes hacer tablas, usa items.
+
+BÚSQUEDA:
+Siempre usá herramientas de búsqueda (Google Search) para obtener:
+direcciones, teléfonos, horarios, precios, actividades.
+
+FUENTES PRIORITARIAS:
+Sitios oficiales de las instituciones deportivas.
+Municipalidad de Rosario → rosario.gob.ar
+
+ESTILO DE RESPUESTA:
+Respuestas cortas, claras y verificables.
+Incluir emojis cuando sea útil.
+Mencionar dirección o zona siempre que sea posible.
+    </script>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

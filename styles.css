@@ -1,0 +1,74 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilos para las burbujas de chat */
+.chat-bubble-user {
+    background-color: #2563EB; /* blue-600 */
+    color: white;
+    border-radius: 20px 20px 5px 20px;
+}
+
+.chat-bubble-bot {
+    background-color: #E5E7EB; /* gray-200 */
+    color: #1F2937; /* gray-800 */
+    border-radius: 20px 20px 20px 5px;
+}
+
+/* Animación de escritura */
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    background-color: #9CA3AF; /* gray-400 */
+    display: inline-block;
+    border-radius: 50%;
+    animation: bounce 1.3s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Scrollbar personalizado */
+#chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chat-messages::-webkit-scrollbar-track {
+    background: #F3F4F6; /* gray-100 */
+    border-radius: 10px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+    background: #D1D5DB; /* gray-300 */
+    border-radius: 10px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF; /* gray-400 */
+}
+
+/* Estilos para enlaces en markdown simulado */
+.bot-link {
+    color: #2563EB;
+    text-decoration: underline;
+}
+
+.bot-link:hover {
+    color: #1D4ED8;
+}
